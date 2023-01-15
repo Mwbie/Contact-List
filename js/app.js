@@ -11,6 +11,8 @@ const editModal = document.querySelector('#edit-modal')
 const newFirstname = document.querySelector('.firstname')
 const newLastname = document.querySelector('.lastname')
 const newPhneNumber = document.querySelector('.password')
+const loader = document.querySelector('.loader')
+
 
 //every time by click on edit or delete userId will be update
 let userId = null
@@ -26,7 +28,7 @@ const getAllUser = () => {
                 listContainer.insertAdjacentHTML('beforeend', `
                 <div class="user">
                     <div class="user-profile-wrap">
-                        <img class="user-profile" src="img/noimg.png" alt="default-image">
+                        <img class="user-profile" src="img/default-prof.jpg" alt="default-image">
                         <div class="user-profile-description">
                             <h1 class="user-profile-name">${user[1].userName} - ${user[1].userLastName}<span class="user-age" onclick="copyPhoneNumber('${user[1].userPhoneNumber}')">copy</span> </h1>
                             <h3 class="user-explanations">Phone Number: ${user[1].userPhoneNumber}</h3>
@@ -141,6 +143,10 @@ const updateUser = () => {
 //copy phone number
 const copyPhoneNumber = (number) => {
     window.navigator.clipboard.writeText(number)
+     
+}
+const hiddenPreLoader = () => {
+    loader.classList.add('hidden')
 }
 //add new user 
 addBtn.addEventListener('click', () => {
@@ -157,4 +163,5 @@ saveBtn.addEventListener('click', () => {
 })
 window.addEventListener('load', () => {
     getAllUser()
+    hiddenPreLoader()
 })

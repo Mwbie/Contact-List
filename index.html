@@ -19,7 +19,9 @@
     />
   </head>
   <body>
-   
+    <div class="loader">
+      <img src="img/loading.gif" alt="Loading..." />
+    </div>
 
     <!-- -------------------------------- delete  modal -------------------------------- -->
 
@@ -42,7 +44,7 @@
          <h1 class="modal-title">Fill out the following fields</h1>
         <form action="" class="edit-user-form" onsubmit="event.preventDefault()">
             <div class="input-field">
-                <span><i class="bi bi-cursor-text"></i></span>
+                <span><i class="bi bi-person"></i></span>
                 <input type="text" class="firstname" id="f-name" name="" placeholder="New firstname" spellcheck="false">
             </div>
             <div class="input-field">
@@ -50,7 +52,7 @@
                 <input type="text" class="lastname" id="" name="" placeholder="New lastname" spellcheck="false">
             </div>
             <div class="input-field">
-                <span><i class="bi bi-lock"></i></span>
+                <span><i class="bi bi-phone bi-lock"></i></span>
                 <input type="number" class="password" id="" name="" placeholder="new phone number" spellcheck="false">
             </div>
 
@@ -63,7 +65,7 @@
 
 <!--list -->
 <div class="container-content">
-  <h1 class="user-title">contact list😎💣</h1>
+  <h1 class="user-title">contact list <i  class="bi bi-card-list" style="font-size: 40px;"></i></h1>
   <div id="wrap-users"></div>
   <div class="add-form">
     <button class="add-btn">add contact</button>
@@ -75,7 +77,7 @@
       class="new-lastname"
       placeholder="Enter last name..."
     />
-    <input type="text" class="new-number" placeholder="Enter Number..." />
+    <input type="number" class="new-number" placeholder="Enter Number..." />
     <button type="submit" class="save">save</button>
   </div>
 
